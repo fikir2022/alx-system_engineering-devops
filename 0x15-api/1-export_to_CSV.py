@@ -16,3 +16,9 @@ if __name__ == "__main__":
         [writer.writerow(
             [user_id, username, t.get("completed"), t.get("title")]
          ) for t in todos]
+
+    with open("{}.csv".format(user_id), "w", newline="") as csvfile:
+        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+        [writer.writerow(
+            [user_id, username, t.get("completed"), t.get("title")]
+         ) for t in todos]
