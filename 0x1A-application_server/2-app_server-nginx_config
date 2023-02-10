@@ -1,6 +1,5 @@
-
- server {
-        listen 80;
+server {
+        listen 80 default_server;
 
         # 0x1A-application_server - 2-app_server-nginx_config
         location = /airbnb-onepage/ {
